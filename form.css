@@ -1,29 +1,346 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .container {
-      width: 395px;        /* container is NOT full width */
-      margin: 60px auto;   /* centers the container */
-      padding: 20px;
-      border: 2px solid black;
-      text-align: left;  /* text stays left aligned */
-      align-items: center;   
-    }
-    .button-box {
-        
-        width: 100%;
-        text-align: center;
-    }
-    .container button {
+/* BASE */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #24292f;
+  height: 100vh;
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT HERO SECTION */
+.left {
+  width: 50%;
+  background: radial-gradient(circle at bottom, #5b3df5 0%, #000 60%);
+  color: #ffffff;
+  padding: 64px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.left-content h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.left-content p {
+  font-size: 16px;
+  color: #c9d1d9;
+  margin-bottom: 12px;
+}
+
+.left-content a {
+  font-size: 14px;
+  color: #c9d1d9;
+  text-decoration: none;
+}
+
+.left-content a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SECTION */
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  position: relative;
+}
+
+/* TOP SIGN IN LINK */
+.top-link {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 14px;
+}
+
+.top-link a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.top-link a:hover {
+  text-decoration: underline;
+}
+
+/* FORM */
+.form-box {
+  width: 360px;
+}
+
+.form-box h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* SOCIAL BUTTONS */
+.social {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  background: #f6f8fa;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.social:hover {
+  background: #f3f4f6;
+}
+
+/* DIVIDER */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d0d7de;
+}
+
+.divider span {
+  padding: 0 12px;
+  font-size: 12px;
+  color: #6e7781;
+}
+
+/* LABELS */
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 12px 0 6px;
+}
+
+/* INPUTS */
+input,
+select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+}
+
+/* HELP TEXT */
+small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6e7781;
+  line-height: 1.4;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+  font-size: 14px;
+  color: #24292f;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-top: 3px;
+}
+
+.checkbox label {
+  display: inline;
+  width: auto;
+  line-height: 1.4;
+}
+/* CREATE ACCOUNT BUTTON */
+.create-btn {
+  width: 100%;
+  padding: 10px 16px;
+  margin-top: 8px;
+  background: #1f2328;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background: #2c3137;
+}
+
+/* TERMS */
+.terms {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #6e7781;
+  line-height: 1.5;
+}
+
+.terms a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .left {
+    display: none;
+  }
+
+  .right {
     width: 100%;
-     padding: 12px;
-    box-sizing: border-box;
-    }
-    .form-group {
-     margin-bottom: 20px;
-    }
-  
-    .container button {
-        width: 100%;
-        padding: 12px;
-        box-sizing: border-box;
-    }
+    justify-content: center;
+  }
+}
+/* ===== GitHub Login Dark Theme ===== */
 
+.github-bg {
+  background: #0d1117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  width: 360px;
+  text-align: center;
+  color: #e6edf3;
+}
+
+.logo {
+    width: 48;x;
+  margin-bottom: 24px;
+}
+
+.login-wrapper h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  background: #161b22;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  text-align: left;
+}
+
+.login-box label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #e6edf3;
+}
+
+.login-box input:focus {
+  border-color: #1f6feb;
+  outline: none;
+}
+
+.password-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-row a {
+  font-size: 12px;
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 8px;
+  background: #238636;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sign-in-btn:hover {
+  background: #2ea043;
+}
+
+.divider {
+  margin: 16px 0;
+}
+
+.oauth {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  color: #e6edf3;
+  cursor: pointer;
+}
+
+.oauth:hover {
+  background: #21262d;
+}
+
+.new-account {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.new-account a,
+.passkey {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.passkey {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}

@@ -7,7 +7,7 @@
     <meta name="author" content="Uch Mengyean">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
-    <link rel="icon" type="image/jpg" href="images/github-logo.png">
+    <link rel="icon" type="image/jpg" href="images/Github_logo.jpg">
     <title>Sign Up for Github</title>
     <style>
     
@@ -15,55 +15,86 @@
   </style>
 </head>
 <body>
-<p style="text-align: right; display: inline;">Already have an account? 
-   <a href="https://link" target="_blank">
-        Sign in ->
-    </a>
-</p>
-<div class="container">
-    <h1>Sign up for GitHub</h1>
 
-    <div class = "button-box">
-    <button>Continue with Google</button>
-    <br><br>
-    <button style="align-items: center;">Continue with Apple</button>
+<div class="container">
+    <!-- LEFT SECTION -->
+    <div class="left">
+        <div class="left-content">
+            <h1>Create your free account</h1>
+            <p>Explore GitHub’s core features for individuals and organizations.</p>
+            <a href="#">See what’s included ↓</a>
+        </div>
     </div>
 
-    <br><br>
-    <form action = "/action_page.php">
-        <div class="form-group">
-            <label for="email"><bold>Email address</bold></label><br>
-            <input placeholder="Email" type="email" id="email" name="email" required><br>
-        </div>
-        <div>
-            <label for="password"><bold>Password</bold></label><br>           
-            <input placeholder="Password" type ="password" name="password" required>
-            <p>Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter.</p><br>
-        </div>
-        <div>
-            <label for="username"><bold>Username</bold></label><br>
-            <input placeholder="Username" type="text" id="username" name="username" required>
-            <p>Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.</p><br>
-        </div>
-        <div>
-            <label for="country"><bold>Your Country/Region</bold></label><br>
-            <select name="country" id="country">
-                <option> Cambodia</option>
-                <option> Vietnam</option>
-                <option> Sigapore</option>
-                <option> Australia</option>
-                <option> Newzealand</option>
-                <option> United State</option>
-            </select>
-            <p>For compliance reasons, we're required to collect country information to send you occasional updates and announcements.</p>
-        </div>
-        <div>
-            <label for="updates">Email preferences</label><br>
-            <input type="checkbox" name="updates" required>
-            Receive occasional product updates and announcements
-        </div>
-        <div class="form-group">
+    
+    <!-- RIGHT SECTION -->
+    <div class="right">
+        <div class="form-box">
+            <p class="top-link">
+            Already have an account? <a href="signin.html">Sign in →</a>
+            </p>
 
+            <h2>Sign up for GitHub</h2>
+            <button class="social google">Continue with Google</button>
+            <button class="social apple">Continue with Apple</button>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+            
+            <form action = "/action_page.php">
+                
+                <label for="email"><bold>Email*</bold></label>
+                <input placeholder="Email" type="email" id="email" name="email" required>
+            
+                <label for="password"><bold>Password*</bold></label>
+                <input placeholder="Password" type ="password" name="password" required>
+                <small>
+                    Password should be at least 15 characters OR at least 8 characters
+                    including a number and a lowercase letter.
+                </small >
+
+                
+                
+                <label for="username"><bold>Username*</bold></label>
+                <input placeholder="Username" type="text" id="username" name="username" required>
+                <small>
+                    Username may only contain alphanumeric characters or single hyphens,
+                    and cannot begin or end with a hyphen.
+                </small>
+
+                
+                
+                <label for="country"><bold>Your Country/Region*</bold></label>
+                <select name="country" id="country">
+                    <option> Cambodia</option>
+                    <option> Vietnam</option>
+                    <option> Sigapore</option>
+                    <option> Australia</option>
+                    <option> Newzealand</option>
+                    <option> United State</option>
+                </select>
+                <small>
+                    For compliance reasons, we're required to collect country information to send you occasional updates and announcements.
+                </small>
+                
+                <label for="updates">Email preferences</label>
+                <div >
+                    <input type="checkbox" name="updates" required>
+                    <p>Receive occasional product updates and announcements</p>
+                </div>
+
+                <button class="create-btn">Create account</button>
+
+                <p class="terms">
+                    By creating an account, you agree to the
+                    <a href="#">Terms of Service</a>. For more information about GitHub’s
+                    privacy practices, see the <a href="#">GitHub Privacy Statement</a>.
+                </p>
+            </form>
+    
         </div>
-    </form>
+    </div>
 </div>
+</body>
+</html>
