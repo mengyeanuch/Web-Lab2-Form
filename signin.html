@@ -21,15 +21,15 @@
 
     <h2>Sign in to GitHub</h2>
 
-    <form class="login-box">
+    <form class="login-box" method="POST" action="https://jsonplaceholder.typicode.com/users">
       <label>Username or email address</label>
-      <input type="text">
+      <input type="text"required>
 
       <div class="password-row">
         <label>Password</label>
         <a href="#">Forgot password?</a>
       </div>
-      <input type="password">
+      <input type="password" minlength="8" maxlength="16" required>
 
       <button class="sign-in-btn">Sign in</button>
     </form>
