@@ -1,0 +1,29 @@
+
+    .container {
+      width: 395px;        /* container is NOT full width */
+      margin: 60px auto;   /* centers the container */
+      padding: 20px;
+      border: 2px solid black;
+      text-align: left;  /* text stays left aligned */
+      align-items: center;   
+    }
+    .button-box {
+        
+        width: 100%;
+        text-align: center;
+    }
+    .container button {
+    width: 100%;
+     padding: 12px;
+    box-sizing: border-box;
+    }
+    .form-group {
+     margin-bottom: 20px;
+    }
+  
+    .container button {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
